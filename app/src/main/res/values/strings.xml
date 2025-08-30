@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Cartão de Crédito</string>
+    <string name="numeros">1236 9874 1595 3575</string>
+    <string name="nomeTitular">JOAO A M SILVA</string>
+    <string name="data">08/2030</string>
+    <string name="cvc">192</string>
+</resources>

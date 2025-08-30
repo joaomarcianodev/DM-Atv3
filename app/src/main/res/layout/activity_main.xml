@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/viewFrente"
+        android:layout_width="320dp"
+        android:layout_height="200dp"
+        android:background="@drawable/ic_cartao"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toTopOf="@id/viewAtras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgBB"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/img_bb"
+        android:elevation="8dp"
+        app:layout_constraintStart_toStartOf="@+id/viewFrente"
+        app:layout_constraintTop_toTopOf="@+id/viewFrente" />
+
+    <ImageView
+        android:id="@+id/imgChip"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/img_chip"
+        android:elevation="8dp"
+        app:layout_constraintStart_toStartOf="@+id/viewFrente"
+        app:layout_constraintTop_toBottomOf="@+id/imgBB" />
+
+    <ImageView
+        android:id="@+id/imgAproximacao"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        android:rotation="90"
+        android:src="@drawable/ic_aproximacao"
+        android:elevation="8dp"
+        app:layout_constraintStart_toEndOf="@+id/imgChip"
+        app:layout_constraintTop_toBottomOf="@+id/imgBB" />
+
+    <EditText
+        android:id="@+id/txtNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="15dp"
+        android:minWidth="100dp"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:text="@string/nomeTitular"
+        android:background="@android:color/transparent"
+        android:maxLines="1"
+        android:maxLength="25"
+        android:textAlignment="viewStart"
+        android:textColor="@color/azulBB"
+        android:elevation="8dp"
+        android:hint="DIGITE SEU NOME"
+        android:textColorHint="#A1A1A1"
+        android:inputType="textNoSuggestions|textCapCharacters"
+        android:imeOptions="actionNext"
+        app:layout_constraintBottom_toBottomOf="@id/viewFrente"
+        app:layout_constraintStart_toStartOf="@id/viewFrente" />
+
+    <TextView
+        android:id="@+id/txtOurocard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="ourocard"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/azulBB"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:elevation="8dp"
+        app:layout_constraintEnd_toEndOf="@id/viewFrente"
+        app:layout_constraintTop_toTopOf="@id/viewFrente" />
+
+    <ImageView
+        android:id="@+id/imgVisa"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/img_visa"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewFrente"
+        app:layout_constraintEnd_toEndOf="@+id/viewFrente" />
+
+
+    <View
+        android:id="@+id/viewAtras"
+        android:layout_width="320dp"
+        android:layout_height="200dp"
+        android:background="@drawable/ic_cartao"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewFrente" />
+
+    <View
+        android:id="@+id/viewFaixa"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_faixa"
+        android:elevation="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/viewAtras"
+        app:layout_constraintStart_toStartOf="@+id/viewAtras"
+        app:layout_constraintTop_toTopOf="@id/viewAtras" />
+
+    <EditText
+        android:id="@+id/txtNumeros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numeros"
+        android:background="@android:color/transparent"
+        android:inputType="number"
+        android:maxLines="1"
+        android:maxLength="19"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:textSize="20sp"
+        android:elevation="8dp"
+        android:textColor="@color/azulBB"
+        android:minWidth="180dp"
+        android:hint="NUMERO DO CARTAO"
+        android:textColorHint="#A1A1A1"
+        android:imeOptions="actionNext"
+        app:layout_constraintTop_toBottomOf="@id/viewFaixa"
+        app:layout_constraintStart_toStartOf="@id/viewAtras"/>
+
+    <TextView
+        android:id="@+id/lblData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="30dp"
+        android:elevation="8dp"
+        android:fontFamily="sans-serif"
+        android:text="EXP. DATE:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/azulBB"
+        android:textSize="6sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/lblCode"
+        app:layout_constraintStart_toStartOf="@id/viewAtras" />
+
+    <EditText
+        android:id="@+id/txtData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/data"
+        android:background="@android:color/transparent"
+        android:inputType="date"
+        android:maxLength="7"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="8dp"
+        android:fontFamily="sans-serif"
+        android:textAlignment="viewStart"
+        android:textColor="@color/azulBB"
+        android:textSize="6sp"
+        android:minWidth="25dp"
+        android:hint="DATA DE VALIDADE"
+        android:textColorHint="#A1A1A1"
+        android:imeOptions="actionNext"
+        app:layout_constraintStart_toStartOf="@id/viewAtras"
+        app:layout_constraintTop_toBottomOf="@+id/lblData" />
+
+    <EditText
+        android:id="@+id/txtCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="2dp"
+        android:background="@android:color/transparent"
+        android:elevation="8dp"
+        android:fontFamily="sans-serif"
+        android:inputType="number"
+        android:maxLength="3"
+        android:text="@string/cvc"
+        android:textAlignment="viewStart"
+        android:textColor="@color/azulBB"
+        android:textSize="6sp"
+        android:minWidth="10dp"
+        android:hint="CODIGO DE SEGURANCA"
+        android:textColorHint="#A1A1A1"
+        android:imeOptions="actionDone"
+        app:layout_constraintStart_toStartOf="@id/viewAtras"
+        app:layout_constraintTop_toBottomOf="@+id/lblCode" />
+
+    <TextView
+        android:id="@+id/lblCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="25dp"
+        android:elevation="8dp"
+        android:fontFamily="sans-serif"
+        android:text="SECURITY CODE:"
+        android:textColor="@color/azulBB"
+        android:textSize="6sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/viewAtras"
+        app:layout_constraintStart_toStartOf="@id/viewAtras" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
